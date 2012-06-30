@@ -10,8 +10,10 @@
     "http://*/*",
     "https://*/*"
   ],
-	"browser_action": {
-		"name": "Click to play or pause Pandora"
-	},
-  "manifest_version": 2
+  "manifest_version": 2,
+  "browser_action": {
+		"name": "Click to play or pause Pandora",
+    "default_icon": "images/play_pause.png",
+    "default_title": "Chrandora"
+  }
 }
