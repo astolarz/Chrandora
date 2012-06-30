@@ -1,5 +1,12 @@
-console.log("playPause()");
-//if(!document.getElementsByClassName('playButton'))[0].firstChild.click()) {
-document.getElementsByClassName('pauseButton')[0].firstChild.click()
-console.log('after');
-//}
+function isVisible(element) {
+  return element.style['display'] != 'none';
+}
+
+playButton = document.getElementsByClassName('playButton')[0];
+pauseButton = document.getElementsByClassName('pauseButton')[0];
+
+if (isVisible(playButton)) {
+  playButton.click();
+} else {
+  pauseButton.click();
+}
