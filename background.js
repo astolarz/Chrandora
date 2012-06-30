@@ -13,8 +13,8 @@
 var isInjected = false;
 
 function findPandora() {
-	chrome.tabs.query({"url":"pandora.com"}, function(tabs) {
-	console.log("test "+ tabs.length);
+	chrome.tabs.query({"url": "*.pandora.com/*"}, function(tabs) {
+    console.log("test "+ tabs.length);
 		if(tabs.length > 0) {
       console.log("test 2");
 		  console.log("size: " + tabs.length + " " + tabs[0]);
