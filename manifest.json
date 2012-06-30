@@ -10,5 +10,9 @@
     "http://*/*",
     "https://*/*"
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "images/play_pause.png",
+    "default_title": "Chrandora"
+  }
 }
