@@ -10,6 +10,9 @@
 	});
 });*/
 
+document.write('<script src="jquery.min.js"' +
+    'type="text/javascript"><\/script>')
+
 var isInjected = false;
 
 function findPandora() {
@@ -22,7 +25,7 @@ function findPandora() {
 	});
 }
 
-function test() {
+function test(args) {
 	if(!isInjected) {
 		chrome.extension.onRequest.addListener(function(tab) {
 		});
