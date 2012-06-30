@@ -24,13 +24,14 @@ function findPandora() {
       chrome.tabs.executeScript(tabs[0].id, {file: "content.js"}, function() {
         console.log("inject");
         chrome.tabs.sendRequest(tabs[0].id, {}, function(results) {
-          jQuery('.playButton').toggle();
+          console.log('sent');
         });
       });
 		}
 	});
 }
 
+//comment
 function test(args) {
 	if(!isInjected) {
 		chrome.extension.onRequest.addListener(function(tab) {

@@ -1,7 +1,5 @@
-function playPause() {
-	console.log("playPause()");
-}
-
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-  sendResponse(playPause());
-});
+console.log("playPause()");
+//if(!document.getElementsByClassName('playButton'))[0].firstChild.click()) {
+document.getElementsByClassName('pauseButton')[0].firstChild.click()
+console.log('after');
+//}
