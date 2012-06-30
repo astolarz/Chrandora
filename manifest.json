@@ -1,6 +1,6 @@
 {
-  "name": "Pandora Play",
-  "version": "1.1",
+  "name": "Chrandora",
+  "version": "0.1",
   "description": "Play or pause Pandora.",
   "background": {
     "scripts": ["background.js"]
