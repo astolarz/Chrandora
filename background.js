@@ -13,11 +13,17 @@
 var isInjected = false;
 
 function findPandora() {
-	chrome.tabs.query({"url": "*.pandora.com/*"}, function(tabs) {
+	chrome.tabs.query({"url": "http://www.pandora.com/"}, function(tabs) {
     console.log("test "+ tabs.length);
 		if(tabs.length > 0) {
-      console.log("test 2");
+      console.log("test b");
 		  console.log("size: " + tabs.length + " " + tabs[0]);
+      chrome.tabs.executeScript(tabs[0].id, {file: "content.js"}, function() {
+        console.log("inject");
+        chrome.tabs.sendRequest(tabs[0].id, {}, function(results) {
+          jQuery('.playButton').toggle();
+        });
+      });
 		}
 	});
 }
