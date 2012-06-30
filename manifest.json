@@ -10,5 +10,8 @@
     "http://*/*",
     "https://*/*"
   ],
+	"browser_action": {
+		"name": "Click to play or pause Pandora"
+	},
   "manifest_version": 2
 }
