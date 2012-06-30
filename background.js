@@ -6,4 +6,4 @@ function playPause(args) {
   });
 }
 
-chrome.browserAction.onClicked.addListener(playPause);
+chrome.browserAction.onClicked.addListener(togglePandoraState);

@@ -3,7 +3,9 @@
   "version": "0.1",
   "description": "Play or pause Pandora.",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["jquery.min.js",
+                "togglePandoraState.js",
+                "background.js"]
   },
   "permissions":  [
     "tabs",
