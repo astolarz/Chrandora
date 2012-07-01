@@ -1,13 +1,23 @@
 Chandora v1.0
 =================
 June 30, 2012
+
 A Chrome extension to pause/play Pandora without needing to switch tabs.
+
+Description
+-------
+So you're jamming to Pandora, but then you see a link to a really cool video. Now you have to manually switch tabs, click the pause button, then switch back to the video, and once the video is done, you have to do this all over again! Talk about a first world problem.
+
+Enter Chandora. With a simple Chrome extension, you now have a nice shiny button to do this from any page! You want keyboard shortcuts? We got keyboard shortcuts! Choose between Ctrl+\, Crtl+/, or Ctrl+P.
+
+Chandora is smart. Are you a tab hog? Do you often forget you already have Pandora open in three other tabs? Chandora will make sure only to pause/unpause the most recently used instance of Pandora.
 
 License
 -------
 Copyright 2012, Alexander Chow, Brad Burlage and Aaron Stolarz
 
 Licensed under the MIT license.
+
 <https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt>
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -28,11 +38,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Description
--------
-So you're jamming to Pandora, but then you see a link to a really cool video. Now you have to manually switch tabs, click the pause button, then switch back to the video, and once the video is done, you have to do this all over again! Talk about a first world problem.
-
-Enter Chandora. With a simple Chrome extension, you now have a nice shiny button to do this from any page! You want keyboard shortcuts? We got keyboard shortcuts! Choose between Ctrl+\, Crtl+/, or Ctrl+P.
-
-Chandora is smart. Are you a tab hog? Do you often forget you already have Pandora open in three other tabs? Chandora will make sure only to pause/unpause the most recently used instance of Pandora.
