@@ -1,6 +1,6 @@
 {
   "name": "Chrandora",
-  "version": "0.1",
+  "version": "1.0",
   "description": "Play or pause Pandora.",
   "background": {
     "scripts": ["jquery.min.js",
