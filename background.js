@@ -27,7 +27,6 @@ function tabActivated(activeInfo) {
 
 chrome.extension.onMessage.addListener(function(details) {
   playPause();
-  console.log("caught key binding");
 });
 
 chrome.browserAction.onClicked.addListener(playPause);
