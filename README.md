@@ -14,7 +14,7 @@ Chandora is smart. Are you a tab hog? Do you often forget you already have Pando
 
 License
 -------
-Copyright 2012, Alexander Chow, Brad Burlage and Aaron Stolarz
+Copyright 2012, Alexander Chow, Brad Burlage, and Aaron Stolarz
 
 Licensed under the MIT license.
 
