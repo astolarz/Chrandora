@@ -1,4 +1,4 @@
-function playPause(args) {
+function playPause() {
   chrome.tabs.query({"url": "*://*.pandora.com/*"}, function(tabs) {
     if (tabs.length > 0) {
       chrome.tabs.executeScript(tabs[0].id, {file: "content.js"});
@@ -25,6 +25,11 @@ function tabActivated(activeInfo) {
   chrome.tabs.get(activeInfo.tabId, pandoraActivityHandler);
 }
 
-chrome.browserAction.onClicked.addListener(togglePandoraState);
+chrome.extension.onMessage.addListener(function(details) {
+  playPause();
+  console.log("caught key binding");
+});
+
+chrome.browserAction.onClicked.addListener(playPause);
 chrome.tabs.onUpdated.addListener(tabUpdated);
 chrome.tabs.onActivated.addListener(tabActivated);
