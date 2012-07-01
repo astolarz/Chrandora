@@ -17,5 +17,11 @@
 		"name": "Click to play or pause Pandora",
     "default_icon": "images/play_pause.png",
     "default_title": "Chrandora"
+  },
+  "content_scripts": [
+  {
+    "matches": ["*://*/*"],
+    "js": ["inject.js"]
   }
+  ]
 }

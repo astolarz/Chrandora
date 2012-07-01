@@ -10,5 +10,5 @@ if (!window.chrandoraListener) {
           );
       }
     });
-  window.chrandoraListener = true; 
+  window.chrandoraListener = true;
 }

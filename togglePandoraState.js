@@ -1,3 +1,10 @@
+function startPlayingLastTab() {
+  var lastTab = pandoraMRU.pop();
+  chrome.tabs.executeScript(
+    lastTab,
+    {file: "content.js"});
+}
+
 function processResponses(responseMap) {
   console.log("processing responses");
   var isPlaying = false;
@@ -10,11 +17,15 @@ function processResponses(responseMap) {
     }
   });
   if (isPlaying) {
-    chrome.tabs.executeScript(curTabPlaying, {
-      file: "content.js"
-    });
+    chrome.tabs.executeScript(
+      curTabPlaying,
+      {file: "content.js"},
+      function() {
+        pandoraMRU.push(curTabPlaying);
+      });
   } else {
     // nothing playing, Play the most recently viewed Pandora tab
+    startPlayingLastTab();
   }
 }
 
@@ -46,7 +57,7 @@ var extensionResponder = function() {
 }();
 
 function togglePandoraState() {
-  chrome.tabs.query({"url":"http://www.pandora.com/"}, function(tabs) {
+  chrome.tabs.query({"url":"*://*.pandora.com/*"}, function(tabs) {
     if (!tabs.length) {
       console.log("Did not find any pandora tabs");
       return;
