@@ -6,4 +6,15 @@ function playPause(args) {
   });
 }
 
+var pandoraTabs = []
+
+function tabUpdatedCallback(tabId, changeInfo, tab) {
+  console.log(tab)
+}
+
+function tabCreatedCallback(tab) {
+  chrome.tabs.onUpdated.addListener(tabUpdatedCallback);
+}
+
 chrome.browserAction.onClicked.addListener(togglePandoraState);
+chrome.tabs.onCreated.addListener(tabCreatedCallback);

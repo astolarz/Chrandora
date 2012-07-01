@@ -1,5 +1,5 @@
 function togglePandoraState() {
-  chrome.tabs.query({"url":"http://www.pandora.com/"}, function(tabs) {
+  chrome.tabs.query({"url":"*://*.pandora.com/*"}, function(tabs) {
     if (!tabs.length) {
       console.log("Did not find any pandora tabs");
       return;
