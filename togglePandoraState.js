@@ -69,18 +69,22 @@ function togglePandoraState() {
       var curTabPlaying = false;
       // install the chrandora message listener on each tab
       console.log("install chrandora client Responder");
-      chrome.tabs.executeScript(tab.id, {"file":"clientResponder.js"});
-      chrome.tabs.sendMessage(
+      chrome.tabs.executeScript(
         tab.id,
-        {"requestType":"isPlaying"},
-        function(response) {
-          console.log("got response from tab");
-          responder.checkInTabState({
-            "tabId": tab.id,
-            "isPlaying": response.isPlaying
-          });
-        }
-      );
+        {"file":"clientResponder.js"},
+        function() {
+           chrome.tabs.sendMessage(
+             tab.id,
+             {"requestType":"isPlaying"},
+             function(response) {
+               console.log("got response from tab");
+               responder.checkInTabState({
+                 "tabId": tab.id,
+                 "isPlaying": response.isPlaying
+               });
+             }
+           );
+        });
     });
   });
 }

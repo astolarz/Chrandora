@@ -33,7 +33,7 @@ chrome.extension.onMessage.addListener(function(details) {
   playPause();
 });
 
-chrome.browserAction.onClicked.addListener(playPause);
+chrome.browserAction.onClicked.addListener(togglePandoraState);
 chrome.tabs.onUpdated.addListener(tabUpdated);
 chrome.tabs.onActivated.addListener(tabActivated);
 chrome.tabs.onRemoved.addListener(tabRemoved);
