@@ -21,6 +21,7 @@ function processResponses(responseMap) {
       curTabPlaying,
       {file: "content.js"},
       function() {
+        filterMRU(curTabPlaying);
         pandoraMRU.push(curTabPlaying);
       });
   } else {
