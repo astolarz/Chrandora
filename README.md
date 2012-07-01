@@ -1,4 +1,4 @@
-Chandora v1.0
+Chrandora v1.0
 =================
 June 30, 2012
 
@@ -8,9 +8,9 @@ Description
 -------
 So you're jamming to Pandora, but then you see a link to a really cool video. Now you have to manually switch tabs, click the pause button, then switch back to the video, and once the video is done, you have to do this all over again! Talk about a first world problem.
 
-Enter Chandora. With a simple Chrome extension, you now have a nice shiny button to do this from any page! You want keyboard shortcuts? We got keyboard shortcuts! Choose between Ctrl+\, Crtl+/, or Ctrl+P.
+Enter Chrandora. With a simple Chrome extension, you now have a nice shiny button to do this from any page! You want keyboard shortcuts? We got keyboard shortcuts! Choose between Ctrl+\, Crtl+/, or Ctrl+P.
 
-Chandora is smart. Are you a tab hog? Do you often forget you already have Pandora open in three other tabs? Chandora will make sure only to pause/unpause the most recently used instance of Pandora.
+Chrandora is smart. Are you a tab hog? Do you often forget you already have Pandora open in three other tabs? Chrandora will make sure only to pause/unpause the most recently used instance of Pandora.
 
 License
 -------
