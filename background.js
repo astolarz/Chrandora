@@ -9,7 +9,7 @@ function playPause(args) {
 var pandoraTabs = []
 
 function tabUpdatedCallback(tabId, changeInfo, tab) {
-  console.log(tab)
+  console.log(tab);
 }
 
 function tabCreatedCallback(tab) {
