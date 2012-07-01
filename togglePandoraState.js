@@ -6,7 +6,6 @@ function startPlayingLastTab() {
 }
 
 function processResponses(responseMap) {
-  console.log("processing responses");
   var isPlaying = false;
   var curTabPlaying = null;   // the tab id of the tab currently playing
   // calculate if any tab is playing
@@ -59,16 +58,13 @@ var extensionResponder = function() {
 function togglePandoraState() {
   chrome.tabs.query({"url":"*://*.pandora.com/*"}, function(tabs) {
     if (!tabs.length) {
-      console.log("Did not find any pandora tabs");
       return;
     }
-    console.log("found "+tabs.length+" pandora tabs");
     var responder = extensionResponder.createNew(tabs.length);
     // find if any tab is currently playing
     $.each(tabs, function(indx, tab) {
       var curTabPlaying = false;
       // install the chrandora message listener on each tab
-      console.log("install chrandora client Responder");
       chrome.tabs.executeScript(
         tab.id,
         {"file":"clientResponder.js"},
@@ -77,7 +73,6 @@ function togglePandoraState() {
              tab.id,
              {"requestType":"isPlaying"},
              function(response) {
-               console.log("got response from tab");
                responder.checkInTabState({
                  "tabId": tab.id,
                  "isPlaying": response.isPlaying

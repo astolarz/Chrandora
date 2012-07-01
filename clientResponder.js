@@ -1,6 +1,5 @@
 // install chrandoraListener if not yet installed
 if (!window.chrandoraListener) {
-  console.log("installing chrandora message listener");
   chrome.extension.onMessage.addListener(
     function(request, sender, sendResponse) {
       if(request.requestType == "isPlaying") {
