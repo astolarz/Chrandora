@@ -25,6 +25,11 @@ function tabActivated(activeInfo) {
   chrome.tabs.get(activeInfo.tabId, pandoraActivityHandler);
 }
 
+function tabRemoved(tabId, removeInfo) {
+  pandoraMRU = pandoraMRU.filter(function (e) { return e != tabId; });
+  console.log(pandoraMRU);
+}
+
 chrome.extension.onMessage.addListener(function(details) {
   playPause();
 });
@@ -32,3 +37,4 @@ chrome.extension.onMessage.addListener(function(details) {
 chrome.browserAction.onClicked.addListener(playPause);
 chrome.tabs.onUpdated.addListener(tabUpdated);
 chrome.tabs.onActivated.addListener(tabActivated);
+chrome.tabs.onRemoved.addListener(tabRemoved);
