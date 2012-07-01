@@ -12,8 +12,8 @@ pandoraMRU = [];
 
 function pandoraActivityHandler(tab) {
   if (tab.url.match('pandora.com')) {
+    pandoraMRU = pandoraMRU.filter(function (e) { return e != tab.id });
     pandoraMRU.push(tab.id);
-    console.log(tab.id);
   }
 }
 
