@@ -8,7 +8,7 @@ function playPause() {
 
 // Stack of tabIds of Pandora tabs in order of usage.
 // These should be checked again before use.
-pandoraMRU = [];
+var pandoraMRU = [];
 
 function pandoraActivityHandler(tab) {
   if (tab.url.match('pandora.com')) {
