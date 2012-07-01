@@ -1,5 +1,5 @@
 function playPause() {
-  chrome.tabs.query({"url": "*://*.pandora.com/*"}, function(tabs) {
+  chrome.tabs.query({"url": "*://www.pandora.com/*"}, function(tabs) {
     if (tabs.length > 0) {
       chrome.tabs.executeScript(tabs[0].id, {file: "content.js"});
     }
@@ -10,9 +10,14 @@ function playPause() {
 // These should be checked again before use.
 var pandoraMRU = [];
 
-function pandoraActivityHandler(tab) {
+// Remove tabId from pandoraMRU
+function filterMRU(tabId) {
   pandoraMRU = pandoraMRU.filter(function (e) { return e != tab.id });
-  if (tab.url.match('pandora.com')) {
+}
+
+function pandoraActivityHandler(tab) {
+  filterMRU(tab.id);
+  if (tab.url.match('www.pandora.com')) {
     pandoraMRU.push(tab.id);
   }
 }
@@ -26,11 +31,11 @@ function tabActivated(activeInfo) {
 }
 
 function tabRemoved(tabId, removeInfo) {
-  pandoraMRU = pandoraMRU.filter(function (e) { return e != tabId; });
+  filterMRU(tabId);
 }
 
 chrome.extension.onMessage.addListener(function(details) {
-  playPause();
+  togglePandoraState();
 });
 
 chrome.browserAction.onClicked.addListener(togglePandoraState);
