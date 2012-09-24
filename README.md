@@ -4,6 +4,8 @@ June 30, 2012
 
 A Chrome extension to pause/play Pandora without needing to switch tabs.
 
+[Get it here.](goo.gl/4Raxq)
+
 Description
 -------
 So you're jamming to Pandora, but then you see a link to a really cool video. Now you have to manually switch tabs, click the pause button, then switch back to the video, and once the video is done, you have to do this all over again! Talk about a first world problem.
